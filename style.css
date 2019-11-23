@@ -25,14 +25,71 @@ body {
   color: var(--font-color);
   background-color: #fff;
 }
+
+/*=============================================*/
+/*HEADER AND CONTAINER SET UP*/
+/*=============================================*/
 .container {
-  max-width: 70rem;
+  max-width: 80rem;
 }
+.form-control,
+.btn {
+  font-size: 1.6rem;
+}
+.btn-social {
+  background-color: var(--tab-color-dark);
+  color: #fff;
+  padding: 10px 20px;
+  position: relative;
+  z-index: 1;
+}
+.btn-social:hover {
+  color: #fff;
+}
+.btn-social::after {
+  content: "";
+  width: 0px;
+  background-color: #000;
+  position: absolute;
+  top: -1px;
+  left: -1px;
+  height: calc(100% + 2px);
+  transition: width 0.3s cubic-bezier(0.27, 0.7, 0.71, 0.62);
+  z-index: -1;
+}
+.btn-social:hover::after {
+  border: 1px solid transparent;
+  width: calc(100% + 2px);
+  border-radius: 0.25em;
+}
+header {
+  background-image: linear-gradient(
+      to bottom right,
+      rgba(0, 0, 0, 0.6),
+      rgba(255, 255, 255, 0.6)
+    ),
+    url("images/bg.jpg");
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: top;
+  height: 50vh;
+  position: relative;
+}
+.site-heading-container {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
 .site-heading {
   text-transform: uppercase;
   font-weight: 300;
-  font-size: 3.5rem;
+  font-size: 4.5rem;
   margin: 0;
+  letter-spacing: 0.2rem;
+  color: #fff;
 }
 a:link,
 a:visited {
@@ -44,10 +101,15 @@ a:active {
   text-decoration: none;
 }
 
+/*=============================================*/
+/*HEADER AND CONTAINER SET UP*/
+/*=============================================*/
+
 .social-container {
   border: 1px solid #e0dcdc;
   padding: 2rem;
   box-shadow: 0 0px 5rem 1rem #e7e5e5;
+  margin-top: 2rem;
 }
 .social-container__item {
   flex: 1;
@@ -63,41 +125,51 @@ a:active {
   background: var(--tab-color-light);
 }
 
+/*=============================================*/
+/*Tabs*/
+/*=============================================*/
 .social-container .nav-tabs {
   border-color: transparent;
 }
-.social__link--lightblue {
-  border-right: 1px solid transparent;
+.social__link--heading {
+  display: block;
+  padding: 1rem;
 }
-
-.social__link:link,
-.social__link:visited {
+.social__link--heading:link,
+.social__link--heading:visited {
   color: #fff;
+  background: var(--tab-color-light);
 }
-.social__link:active,
-.social__link:hover {
+.social__link--heading:active,
+.social__link--heading:hover {
   color: #fff;
   background: var(--tab-color-dark);
 }
-.social__link.active {
+.social__link--heading.active {
   background: var(--tab-color-dark);
 }
-.login-texts {
-  margin: 7.5rem 0 7.5rem;
-  padding: 0;
-  text-align: center;
+
+/*=============================================*/
+/*TAB CONTENT*/
+/*=============================================*/
+.social-tab__container form,
+.social-tab__container .social-links {
+  flex: 1;
+  padding: 10px;
+  width: 100%;
 }
 
-.social-link {
+.social-links__link {
+  display: inline-block;
   transition: all 0.3s ease-in-out;
   transform: scale(0.98);
   backface-visibility: hidden;
   margin-top: 1rem;
 }
-.social-link:hover {
+.social-links__link:hover {
   transform: scale(1);
 }
-.social-link img {
+.social-links__link img {
   height: 3.5rem;
   width: auto;
 }
@@ -105,3 +177,9 @@ br {
   color: #c2c0c0;
 }
 /*f8b500*/
+
+@media (max-width: 480px) {
+  .social-tab__container {
+    flex-direction: column;
+  }
+}

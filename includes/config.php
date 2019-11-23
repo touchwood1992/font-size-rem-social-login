@@ -6,3 +6,7 @@ $facebook_credentials = array(
     "callbak_url" => 'https://cloudwebprojects.com/demo/social_login/fb-callback.php',
     "redirect_url" => 'https://cloudwebprojects.com/demo/social_login/index.php?type=fb'
 );
+
+$google_credentials = array(
+    
+);

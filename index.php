@@ -16,6 +16,7 @@ include_once("includes/config.php");
 </head>
 
 <body>
+
   <?php
   //Get Login URL Of Facebook site
   require_once __DIR__ . '/vendor/autoload.php';
@@ -64,47 +65,73 @@ include_once("includes/config.php");
   $loginUrl = $helper->getLoginUrl($facebook_credentials["callbak_url"], $permissions);
   ?>
   <main>
-    <div class="container mt-5 mb-4">
-      <h1 class="site-heading text-center">Social Login Signup</h1>
-    </div>
+
+    <header>
+      <div class="container site-heading-container">
+        <h1 class="site-heading ">Social Login Signup</h1>
+      </div>
+    </header>
 
     <div class="container">
       <div class="social-container">
         <ul class="nav nav-tabs d-flex justify-content-around">
           <li class="social-container__item">
-            <a class="social__link social__link--lightblue active" data-toggle="tab" href="#login-tab">Login</a>
+            <a class="social__link--heading active" data-toggle="tab" href="#login-tab">Login</a>
           </li>
           <li class="social-container__item">
-            <a class="social__link social__link--blue" data-toggle="tab" href="#signup-tab">Signup</a>
+            <a class="social__link--heading" data-toggle="tab" href="#signup-tab">Signup</a>
           </li>
         </ul>
 
         <div class="tab-content">
           <div class="tab-pane active" id="login-tab">
-            <p class="login-texts">
-              Login Account With One of the Below Social Platform.
-            </p>
 
-            <div class="social-links d-flex flex-wrap justify-content-around align-items-center">
-              <a href="<?php echo htmlspecialchars($loginUrl); ?>" class="social-link social-link--facebook">
-                <img src="images/fb.png" alt="" />
-              </a>
-              <a href="#" class="social-link social-link--google">
-                <img src="images/google.png" alt="" />
-              </a>
+            <div class="social-tab__container d-flex justify-content-around align-items-center">
+
+              <form>
+                <div class="form-group">
+                  <input type="text" name="input_username" id="" class="form-control" placeholder="Enter Email">
+                </div>
+                <div class="form-group">
+                  <input type="text" name="input_password" id="" class="form-control" placeholder="Enter Password">
+                </div>
+                <button type="submit" class="btn btn-social">Login</button>
+              </form>
+
+              <div class="social-links">
+                <a href="<?php echo htmlspecialchars($loginUrl); ?>" class="social-links__link social-links__link--fb">
+                  <img src="images/fb.png" alt="" />
+                </a>
+                <a href="#" class="social-links__link social-links__link--fb">
+                  <img src="images/google.png" alt="" />
+                </a>
+              </div>
+
             </div>
+
           </div>
           <div class="tab-pane" id="signup-tab">
-            <p class="login-texts">
-              Signup Account With One of the Below Social Platform.
-            </p>
-            <div class="social-links d-flex flex-wrap justify-content-around align-items-center">
-              <a href="<?php echo htmlspecialchars($loginUrl); ?>" class="social-link social-link--facebook">
-                <img src="images/fb.png" alt="" />
-              </a>
-              <a href="#" class="social-link social-link--google">
-                <img src="images/google.png" alt="" />
-              </a>
+            <div class="social-tab__container d-flex justify-content-around align-items-center">
+
+              <form>
+                <div class="form-group">
+                  <input type="text" name="input_username" id="" class="form-control" placeholder="Enter Email">
+                </div>
+                <div class="form-group">
+                  <input type="text" name="input_password" id="" class="form-control" placeholder="Enter Password">
+                </div>
+                <button type="submit" class="btn btn-social">Signup</button>
+              </form>
+
+              <div class="social-links">
+                <a href="<?php echo htmlspecialchars($loginUrl); ?>" class="social-links__link social-links__link--fb">
+                  <img src="images/fb.png" alt="" />
+                </a>
+                <a href="#" class="social-links__link social-links__link--fb">
+                  <img src="images/google.png" alt="" />
+                </a>
+              </div>
+
             </div>
           </div>
         </div>
