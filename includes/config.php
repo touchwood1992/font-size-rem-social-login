@@ -8,5 +8,8 @@ $facebook_credentials = array(
 );
 
 $google_credentials = array(
-    
+    "client_id" => "943206555465-phhifqn5efer44s9n5m4o038o5qr3tt1.apps.googleusercontent.com",
+    "client_secret" => "6eQ3ddas25b5bKzUtwLInnL5",
+    "callback_url" => "https://cloudwebprojects.com/demo/social_login/google-callback.php",
+    "redirect_url" => 'https://cloudwebprojects.com/demo/social_login/index.php?type=google'
 );

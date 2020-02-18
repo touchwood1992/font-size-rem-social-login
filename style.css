@@ -14,11 +14,11 @@
   --tab-color-dark: #1e90ff;
 }
 html {
-  font-size: 62.5%;
+  font-size: 100%;
 }
 body {
   font-family: "Montserrat", "Arial", sans-serif;
-  font-size: 1.6rem;
+  font-size: 1rem;
   font-weight: 400;
   line-height: 1.5;
   text-align: left;
@@ -30,16 +30,12 @@ body {
 /*HEADER AND CONTAINER SET UP*/
 /*=============================================*/
 .container {
-  max-width: 80rem;
-}
-.form-control,
-.btn {
-  font-size: 1.6rem;
+  max-width: 800px;
 }
 .btn-social {
   background-color: var(--tab-color-dark);
   color: #fff;
-  padding: 10px 20px;
+  padding: 0.625rem 2rem;
   position: relative;
   z-index: 1;
 }
@@ -48,7 +44,7 @@ body {
 }
 .btn-social::after {
   content: "";
-  width: 0px;
+  width: 0;
   background-color: #000;
   position: absolute;
   top: -1px;
@@ -82,13 +78,12 @@ header {
   top: 50%;
   transform: translateY(-50%);
 }
-
 .site-heading {
   text-transform: uppercase;
   font-weight: 300;
-  font-size: 4.5rem;
+  font-size: 2.8125rem;
   margin: 0;
-  letter-spacing: 0.2rem;
+  letter-spacing: 0.1rem;
   color: #fff;
 }
 a:link,
@@ -102,21 +97,21 @@ a:active {
 }
 
 /*=============================================*/
-/*HEADER AND CONTAINER SET UP*/
+/*SOCIAL CONTAINER SET UP*/
 /*=============================================*/
 
 .social-container {
   border: 1px solid #e0dcdc;
-  padding: 2rem;
-  box-shadow: 0 0px 5rem 1rem #e7e5e5;
-  margin-top: 2rem;
+  padding: 1.25rem;
+  box-shadow: 0 0 3.125rem 0.625rem #e7e5e5;
+  margin-top: 1.25rem;
 }
 .social-container__item {
   flex: 1;
   text-align: center;
 }
 .social__link {
-  font-size: 1.7rem;
+  font-size: 1.0625rem;
   text-transform: uppercase;
   display: block;
   padding: 1rem 0;
@@ -133,7 +128,7 @@ a:active {
 }
 .social__link--heading {
   display: block;
-  padding: 1rem;
+  padding: 0.625rem;
 }
 .social__link--heading:link,
 .social__link--heading:visited {
@@ -155,7 +150,7 @@ a:active {
 .social-tab__container form,
 .social-tab__container .social-links {
   flex: 1;
-  padding: 10px;
+  padding: 1rem;
   width: 100%;
 }
 
@@ -170,7 +165,7 @@ a:active {
   transform: scale(1);
 }
 .social-links__link img {
-  height: 3.5rem;
+  height: 2.1875rem;
   width: auto;
 }
 br {

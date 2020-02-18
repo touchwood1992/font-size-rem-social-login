@@ -1,6 +1,6 @@
 <?php
 include_once("includes/config.php");
-require_once __DIR__ . '/vendor/autoload.php'; // change path as needed
+require_once __DIR__ . '/vendor/autoload.php';
 session_start();
 
 $fb = new Facebook\Facebook([
@@ -60,6 +60,5 @@ if (!$accessToken->isLongLived()) {
 }
 
 $_SESSION['fb_access_token'] = (string) $accessToken;
-
 header("Location:" . $facebook_credentials['redirect_url']);
 exit;
